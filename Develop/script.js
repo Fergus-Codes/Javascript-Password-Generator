@@ -11,14 +11,27 @@ var uppercaseCharacter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N
 var numberCharacters = ['1','2','3','4','5','6','7','8','9'];
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//TODO: Edit the writePassword function to say "Invalid user input" if input is invalid.
+
+function writePassword() {
+  
+  var validuserInput = getuserInput(); // this returns true or false
+  var passwordText = document.querySelector("#password"); //Moved before the if statement so that we can see password text regardless of the outcome of IF statement.
+
+ if(validuserInput) { //if all inputs from user are valid, run below code
+ 
+  var Generatedpassword = generatePassword(); // This is connecting the generatePassword function to the Generatedpassword variable.
+  
+
+  passwordText.value = Generatedpassword; // This is telling the js file to print the Generatedpassword Value to the box in above the generate password button.
+
+} else {
+
+  passwordText.value = "Invalid user input" // This else statement tells the user if any invalid input has been input.
 
 }
-
+}
 //TODO Create generatePassword () Function:
 
 function generatePassword () {
