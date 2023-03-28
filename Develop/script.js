@@ -29,7 +29,7 @@ function writePassword() {
 
 } else {
 
-  passwordText.value = "Invalid user input" // This else statement tells the user if any invalid input has been input.
+  passwordText.value = "Invalid user input"; // This else statement tells the user if any invalid input has been input.
 
 }
 }
@@ -41,6 +41,8 @@ function generatePassword () {
 
   var password = ""; // This ensures that whenever this function is called, the password variable starts blank.
  
+  passwordLength = parseInt(prompt("How long should your password to be? (between 8 and 124 characters)"));
+
   for(var i = 0; i < passwordLength; i++) { //This is a for loop  which says, start at 0, and add one until you reach the variable passwordLength variable.
  
   var randomSelection = Math.floor(Math.random() * userinputArray.length) //This says to find randomly selected index's in the userinputArray.
