@@ -68,23 +68,29 @@ if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128 ) { //Thi
 
 }
 
-if (passwordUppercaseIncluded = confirm("Would you like Uppercase characters included?")) {// asks user if they want uppercase characters 
+
+if (passwordUppercaseIncluded = confirm("Would you like Uppercase characters included (OK = Yes, Cancel = No)?")) {// asks user if they want uppercase characters 
   userinputArray = userinputArray.concat(uppercaseCharacter); // If user wants uppercase, all uppercase characters specified in the "uppercaseCharacter" array is concatonated to the userinputArray.
 }
 
-if (passwordLowercaseIndluded = confirm("Would you like Lowercase characters included?")) {
+if (passwordLowercaseIndluded = confirm("Would you like Lowercase characters included (OK = Yes,  Cancel = No)?")) {
   userinputArray = userinputArray.concat(lowercaseCharacter) 
 }
 
-if(passwordSpecialCharactersIncluded = confirm("Would you like special characters included?")) {
+if(passwordSpecialCharactersIncluded = confirm("Would you like special characters included? (OK = Yes, Cancel = No)")) {
   userinputArray = userinputArray.concat(specialCharacter)
 }
 
-if(passwordNumbersIndluded = confirm("Would you like numbers included?")) {
+if(passwordNumbersIndluded = confirm("Would you like numbers included? (OK = Yes, Cancel = No)")) {
   userinputArray = userinputArray.concat(numberCharacters)
 }
 
-return true;
-
+if (userinputArray.length == 0) { //This IF statement ensures that if the user chooses 0 character types, the function will prompt them to choose a atleast one character type and re start the function.
+  alert("Please choose atleast one character type.")
+return false
 }
+
+return true;
+}
+
 
