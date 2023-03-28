@@ -13,7 +13,6 @@ var numberCharacters = ['1','2','3','4','5','6','7','8','9'];
 // Write password to the #password input
 
 //TODO: Edit the writePassword function to say "Invalid user input" if input is invalid.
-
 function writePassword() {
   
   var validuserInput = getuserInput(); // this returns true or false
@@ -92,10 +91,3 @@ generateBtn.addEventListener("click", getCriteria, writePassword);
 
 
 //first thing: Collect password criteria
-function getCriteria () {
-  prompt("How long would you like your password to be? (between 8 and 124 characters)")
-  confirm("would you like to include uppercase?")
-  confirm("would you like to include lowercase?")
-  confirm("Would you like special characters?")
-  confirm("Would you like your password to contain numbers?")
-} 
