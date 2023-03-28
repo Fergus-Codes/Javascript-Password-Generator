@@ -39,7 +39,39 @@ function generatePassword () {
 
 //TODO: Prompt the user for the password Criteria
 
+function getuserInput () { //This function to collect user inputs.
 
+  userinputArray = []; //Reset the array to nil everytime the getuserInput function is called.
+
+ var passwordLength = parseInt(prompt("How long should your password to be? (between 8 and 124 characters)")); // This logs the desired password length into 
+
+if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128 ) { //This validates whether the user has put a valid number into the input box, and asks them to try again if not.
+  
+ alert("Please input a valid number (1,2,3,4,5) etc, and ensure that it is between 8 & 124 characters.")
+
+ return false; // This returns the function as false, ensuring that it will be run again if an invalid prompt is put in.
+
+}
+
+if (passwordUppercaseIncluded = confirm("Would you like Uppercase characters included?")) {// asks user if they want uppercase characters 
+  userinputArray = userinputArray.concat(uppercaseCharacter); // If user wants uppercase, all uppercase characters specified in the "uppercaseCharacter" array is concatonated to the userinputArray.
+}
+
+if (passwordLowercaseIndluded = confirm("Would you like Lowercase characters included?")) {
+  userinputArray = userinputArray.concat(lowercaseCharacter) 
+}
+
+if(passwordSpecialCharactersIncluded = confirm("Would you like special characters included?")) {
+  userinputArray = userinputArray.concat(specialCharacter)
+}
+
+if(passwordNumbersIndluded = confirm("Would you like numbers included?")) {
+  userinputArray = userinputArray.concat(numberCharacters)
+}
+
+return true;
+
+}
 
 
 // Add event listener to generate button
