@@ -5,7 +5,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //TODO: Create array for each character specification
 
-var userinputArray = []; // An empty Array to store all user input
+var userinputArray = []; // An empty Array to store all user input 
 
 var specialCharacter = ['!','@','#','$','%','^','&','*','(',')','_','-','=','+','[','{',']','}','|'];
 var lowercaseCharacter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -24,7 +24,6 @@ function writePassword() {
  
   var Generatedpassword = generatePassword(); // This is connecting the generatePassword function to the Generatedpassword variable.
   
-
   passwordText.value = Generatedpassword; // This is telling the js file to print the Generatedpassword Value to the box in above the generate password button.
 
 } else {
@@ -41,8 +40,6 @@ function generatePassword () {
 
   var password = ""; // This ensures that whenever this function is called, the password variable starts blank.
  
-  passwordLength = parseInt(prompt("How long should your password to be? (between 8 and 124 characters)"));
-
   for(var i = 0; i < passwordLength; i++) { //This is a for loop  which says, start at 0, and add one until you reach the variable passwordLength variable.
  
   var randomSelection = Math.floor(Math.random() * userinputArray.length) //This says to find randomly selected index's in the userinputArray.
@@ -61,7 +58,7 @@ function getuserInput () { //This function to collect user inputs.
 
   userinputArray = []; //Reset the array to nil everytime the getuserInput function is called.
 
- var passwordLength = parseInt(prompt("How long should your password to be? (between 8 and 124 characters)")); // This logs the desired password length into 
+  passwordLength = parseInt(prompt("How long should your password to be? (between 8 and 124 characters)")); // This logs the desired password length into 
 
 if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128 ) { //This validates whether the user has put a valid number into the input box, and asks them to try again if not.
   
