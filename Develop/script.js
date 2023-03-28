@@ -21,7 +21,20 @@ function writePassword() {
 
 //TODO Create generatePassword () Function:
 
+function generatePassword () {
 
+  var password = ""; // This ensures that whenever this function is called, the password variable starts blank.
+ 
+  for(var i = 0; i < passwordLength; i++) { //This is a for loop  which says, start at 0, and add one until you reach the variable passwordLength variable.
+ 
+  var randomSelection = Math.floor(Math.random() * userinputArray.length) //This says to find randomly selected index's in the userinputArray.
+ 
+  password = password + userinputArray[randomSelection]; // This line concatonates the randomly selected indexes until the passwordLength interger is reached.
+ 
+ }
+   return password; //This returns the concatonated and randomised userinput array with the desired password length.
+ 
+ }
 
 
 //TODO: Prompt the user for the password Criteria
