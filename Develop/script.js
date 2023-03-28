@@ -1,6 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+generateBtn.addEventListener("click", writePassword);
+
 //TODO: Create array for each character specification
 
 var userinputArray = []; // An empty Array to store all user input
@@ -31,7 +33,9 @@ function writePassword() {
 
 }
 }
+
 //TODO Create generatePassword () Function:
+
 
 function generatePassword () {
 
@@ -85,9 +89,3 @@ return true;
 
 }
 
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", getCriteria, writePassword);
-
-
-//first thing: Collect password criteria
